@@ -1,0 +1,39 @@
+[
+  {
+    "url": "https://portal.example/",
+    "host": "portal.example",
+    "score": 0,
+    "reasons": [],
+    "verdict": "no_flags"
+  },
+  {
+    "url": "http://192.0.2.10/login",
+    "host": "192.0.2.10",
+    "score": 3,
+    "reasons": [
+      "unencrypted_http",
+      "ip_literal_host",
+      "outside_trusted_hosts"
+    ],
+    "verdict": "review"
+  },
+  {
+    "url": "https://portal.example@review.example/",
+    "host": "review.example",
+    "score": 2,
+    "reasons": [
+      "userinfo_in_url",
+      "outside_trusted_hosts"
+    ],
+    "verdict": "review"
+  },
+  {
+    "url": "https://portal.example.review.example/",
+    "host": "portal.example.review.example",
+    "score": 1,
+    "reasons": [
+      "outside_trusted_hosts"
+    ],
+    "verdict": "review"
+  }
+]
